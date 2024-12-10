@@ -1,0 +1,48 @@
+<ion-header [translucent]="true" class="head" style="background-color:red;">
+  <ion-toolbar>
+    <a href="/tabs/tab1/">
+    <ion-icon name="chevron-back-outline" class="vltr">
+    </ion-icon>
+    </a>
+    <ion-title>
+     Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="head2">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <img src="/assets/Reserve360.png" class="img1">
+
+  <form [formGroup]="formulario" (ngSubmit)="usuarioLogin()" class="form">
+    <ion-input type="text" name="email" placeholder="Email*" required></ion-input>
+    <ion-input type="password" name="senha1" placeholder="Senha*" required></ion-input>
+    <br>
+  </form>
+  
+    <ion-button>
+      Entrar
+    </ion-button>
+
+    <p class="p1">ou</p>
+  
+    <a [routerLink]="['/', 'tabs', 'tab1']">
+    <ion-button color="danger">
+        Conecte-se com o Google
+    </ion-button>
+  </a>
+    
+    <p class="p1">ou</p>
+  
+    <a [routerLink]="['/', 'tabs', 'cadastro']">
+      <ion-button>
+        Faça seu cadastro
+      </ion-button>
+    </a>
+
+</ion-content>

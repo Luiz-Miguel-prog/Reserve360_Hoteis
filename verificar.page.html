@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <p [routerLink]="['/', 'cadastro']" color="Dark">Cancelar</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+    
+    <h6 class="tlt">
+      Enviamos um código para você
+      para verificar seu número.
+    </h6>
+
+    <p class="sub">Enviando para (21) 9xxx-xxxxx</p>
+
+    <ion-input type="text" name="código" placeholder="Digite o código">
+    </ion-input>
+
+          <p [routerLink]="['/', 'verificar']">Reenviar código</p>
+
+    <ion-button [routerLink]="['/', 'inscrever']">Confirmar</ion-button>
+</ion-content>

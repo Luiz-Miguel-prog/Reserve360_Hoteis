@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-icon name="chevron-back-outline" [routerLink]="['/', 'tabs', 'tab2']" color="dark">
+      </ion-icon>
+
+    <ion-title align-items-center>
+    Configurações
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="icone">
+  <ion-icon aria-hidden="true" name="person" class="pessoa" align-items-center>
+  </ion-icon>
+  </div>
+
+  <h6 class="perfil">Perfil</h6>
+  <p [routerLink]="['/', 'tab5']">Nome de ususário</p>
+  <p [routerLink]="['/', 'tab5']">Nome Completo</p>
+  <p [routerLink]="['/', 'tab5']">CPF</p>
+  <p [routerLink]="['/', 'tab5']">E-mail</p>
+
+  <h6 class="conta">Conta</h6>
+  <p [routerLink]="['/', 'tab5']">Alterar a senha</p>
+  <p [routerLink]="['/', 'tab5']">Ajuda</p>
+</ion-content>

@@ -1,0 +1,48 @@
+.Hoteis{
+    width: 15vh;
+}
+
+.pesq{
+  margin-top: 1vh;
+  width: 30vh;
+}
+
+.esq {
+  margin-top: 2vh;
+  font-size: 2.3vh;
+}
+
+.dir{
+  margin-left: 2vh;
+  margin-right: 0;
+  font-size: 2vh;
+}
+
+.card1, .card2, .card3, .card4{
+    width: 21vh;
+    height: 40vh;
+    margin-left: 0;
+    padding-left: 0;
+    border: 2px solid black;
+  }
+
+  .img1, .img2, .img3, .img4{
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .p1, .p2, .p3, .p4{
+    font-size: 2.7vh;
+    margin-left: 0px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .p1min, .p2min, .p3min, .p4min{
+    font-size: 2.5vh;
+    margin-bottom: 15vh;
+    color: gray;
+  }

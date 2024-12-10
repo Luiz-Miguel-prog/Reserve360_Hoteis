@@ -1,0 +1,139 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <a href="#">
+        <img src="assets/360.png" class="logo" style="margin-left: 5px;">
+      </a>
+    <div class="icon">
+
+    <a href="/tabs/tab3/">
+    <ion-icon aria-hidden="true" name="heart" style="margin-left: 85%;"></ion-icon>
+    </a>
+
+    <a [routerLink]="['/', 'tabs', 'login']">
+    <ion-icon aria-hidden="true" name="person"></ion-icon>
+    </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+  
+  <div id="container">
+    <ion-searchbar class="pesq" [(ngModel)]="termoDePesquisa" (ionChange)="pesquisarItens($event)">
+    </ion-searchbar>
+
+    <ion-list>
+      <ion-item *ngFor="let resultado of resultados">
+        {{ resultado }}
+      </ion-item>
+    </ion-list>
+
+
+      <ion-row align-items-center>
+        <ion-col size="1" class="icone1">
+          <ion-icon aria-hidden="true" name="airplane"></ion-icon>
+        </ion-col>
+    
+        <ion-col>
+          <input type="text" name="Entrada" class="entrar" placeholder="Entrada/Saída">
+        </ion-col>
+      </ion-row>
+
+      <ion-row align-items-center>
+        <ion-col size="1" class="icone2">
+          <ion-icon name="home"></ion-icon>
+        </ion-col>
+
+        <ion-col>
+          <input type="text" name="Hospédes" class="hospede" placeholder="Hospedagens e Quartos">
+        </ion-col>
+
+      </ion-row>
+      <br>
+
+      <ion-button class="btn" color="danger">Buscar</ion-button>
+
+    <p class="p0">Venha conhecer</p>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="card1">
+            
+            <img src="assets/Jalapão.png" class="img1" [routerLink]="['/', 'jalapao']"/>
+          
+
+            <ion-card-header>
+              <ion-card-title class="p1">Jalapão - TO</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content class="p1min">
+              300m de distância até o centro.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card class="card2">
+            <a href="">
+            <img src="assets/Pipas.png" class="img2"/>
+            </a>
+
+            <ion-card-header>
+              <ion-card-title class="p2">Pipas - <br> RN</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content class="p2min">
+              100m de distância até o centro.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="card1">
+            <a href="">
+            <img src="assets/Gramado.png" class="img3"/>
+            </a>
+            <ion-card-header>
+              <ion-card-title class="p3">Gramado - RS</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content class="p3min">
+              200m de distância até o centro.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    
+        <ion-col size="6">
+          <ion-card class="card1">
+            <a href="">
+            <img src="assets/Foz do Iguaçu.png" class="img4"/>
+            </a>
+            <ion-card-header>
+              <ion-card-title class="p4">Foz do Iguaçu - PR</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content class="p4min">
+              2km de distância até o centro.
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    
+      <!-- Adicione mais linhas conforme necessário -->
+    </ion-grid>
+    
+
+
+  </div>
+</ion-content>

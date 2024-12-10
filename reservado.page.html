@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+    <ion-title>Mensagem de Confirmação</ion-title>
+  </ion-col>
+
+    <ion-col>
+    <p [routerLink]="['/', 'tabs', 'tab1']">Sair</p>
+  </ion-col>
+  </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <img src="/assets/verificacao.png" class="img1">
+  <h3>Reserva Concluída</h3>
+  <p class="p1">Uhuuull agora é só pegar as malas e ir se 
+    divertir!
+  </p>
+  <br>
+
+  <ion-button [routerLink]="['/', 'tab1']">Prontinho !!</ion-button>
+
+</ion-content>

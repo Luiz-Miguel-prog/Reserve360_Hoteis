@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+    <ion-icon name="chevron-back-outline" [routerLink]="['/', 'inscrever']">
+    </ion-icon>
+      </ion-col>
+      
+      <ion-col align-items-center>
+    <ion-title>Escolha a conta</ion-title>
+      </ion-col>
+  </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-icon aria-hidden="true" name="person" class="perfil" align-items-center>
+  </ion-icon>
+
+      <ion-button [routerLink]="['/', 'tab1']">Continue como ...</ion-button>
+</ion-content>

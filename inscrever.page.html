@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+    <ion-icon name="chevron-back-outline" [routerLink]="['/', 'comentar']">
+    </ion-icon>
+      </ion-col>
+      
+      <ion-col>
+    <ion-title>Inscrever-se</ion-title>
+      </ion-col>
+  </ion-row>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+        <h6 class="tlt"><b>Digite como gostaria de ser chamado</b></h6>
+            <p class="sub">Nome de usuário</p>
+
+        <ion-input type="text" name="nameuser" placeholder="Nome">
+        </ion-input>
+
+        <ion-button class="btn" [routerLink]="['/', 'conta']">Próximo</ion-button>
+</ion-content>

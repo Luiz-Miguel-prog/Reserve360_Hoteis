@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="head">
+    <a [routerLink]="['/', 'tabs', 'login']">
+        Cancelar
+      </a>
+    
+    <ion-title class="tlt">Cadastro</ion-title>
+    
+    <a [routerLink]="['/', 'tabs', 'tab1']">
+        Sair
+      </a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="formulario" (ngSubmit)="cadastrarUsuario()">
+    <ion-input type="text" name="nome" placeholder="Primeiro nome" required></ion-input>
+    <ion-input type="text" name="sobrenome" placeholder="Sobrenome" required></ion-input>
+    <ion-input type="text" name="email" placeholder="Email" required></ion-input>
+    <ion-input type="password" name="senha1" placeholder="Escolha a senha" required></ion-input>
+    <ion-input type="password" name="senha2" placeholder="Repita a senha" required></ion-input>
+    <ion-input type="text" name="nascimento" placeholder="Data de Nascimento" required></ion-input>
+    <ion-input type="text" name="genêro" placeholder="Genêro" required></ion-input>
+    <ion-input type="text" name="celular" placeholder="Celular" required></ion-input>
+  </form>
+  
+</ion-content>
+

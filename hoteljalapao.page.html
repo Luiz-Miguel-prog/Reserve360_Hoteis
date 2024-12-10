@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+        <ion-col>
+      <ion-icon name="chevron-back-outline" class="esq" [routerLink]="['/', 'comentar']">
+      </ion-icon>
+        </ion-col>
+
+        <ion-col>
+      <ion-searchbar class="pesq" color="medium" [(ngModel)]="termoDePesquisa" (ionChange)="pesquisarItens($event)">
+      </ion-searchbar>
+
+      <ion-list>
+        <ion-item *ngFor="let resultado of resultados">
+          {{ resultado }}
+        </ion-item>
+      </ion-list>
+        </ion-col>
+
+        <ion-col>
+    <p [routerLink]="['/', 'tabs', 'tab1']" class="dir">Sair</p>
+        </ion-col>
+  </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+    
+  <ion-row>
+    <ion-col>
+<ion-button class="Hoteis">Hotéis</ion-button>
+
+  <ion-button>
+  <ion-icon name="add"></ion-icon>
+  </ion-button>
+    </ion-col>
+</ion-row>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card1">
+          <img src="/assets/Santa_helena.png" class="img1" [routerLink]="['/','hoteljalapao']"/>
+
+          <ion-card-header>
+            <ion-card-title class="p1">$978</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="p1min">
+            Pousada Santa Helena
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card class="card2">
+          <img src="/assets/aguas_jalapao.png" class="img2" [routerLink]="['/','detalheshotel']"/>
+
+          <ion-card-header>
+            <ion-card-title class="p2">$750</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="p2min">
+           Águas do Jalapão
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card3">
+          <img src="/assets/portal_jalapao.png" class="img3" [routerLink]="['/','hoteljalapao']"/>
+
+          <ion-card-header>
+            <ion-card-title class="p3">$193</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="p3min">
+            Portal do Jalapão
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="6">
+        <ion-card class="card4">
+          <img src="/assets/recanto_jalapao.png" class="img4" [routerLink]="['/','hoteljalapao']"/>
+          
+
+          <ion-card-header>
+            <ion-card-title class="p4">$280</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="p4min">
+            Recanto do Jalapão
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card1">
+
+          <img src="/assets/areias_jalapao.png" class="img1" [routerLink]="['/','hoteljalapao']"/>
+
+          <ion-card-header>
+            <ion-card-title class="p1">$280</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content class="p1min">
+            Areias do Jalapão
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      
+    </ion-row>
+  
+    <!-- Adicione mais linhas conforme necessário -->
+  </ion-grid>
+
+</ion-content>

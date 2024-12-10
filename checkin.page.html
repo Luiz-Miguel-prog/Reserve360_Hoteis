@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+    <ion-icon name="chevron-back-outline" [routerLink]="['/', 'jalapao', 'reserva']"></ion-icon>
+      </ion-col>
+
+      <ion-col>
+    <ion-title>Check-In</ion-title>
+      </ion-col>
+    </ion-row>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar></ion-toolbar>
+  </ion-header>
+
+  <img src="/Projeto/src/assets/aguas_check.png" class="img1">
+
+  <form [formGroup]="entrada" (ngSubmit)="usuarioEntrada()" class="form">
+    <ion-input type="text" formControlName="entrada" placeholder="Entrada" required></ion-input>
+    <ion-input type="text" formControlName="saida" placeholder="Saída" required></ion-input>
+    <ion-input type="text" formControlName="pessoas" placeholder="Quantidade de pessoas (incluindo crianças)" required></ion-input>
+    <ion-input type="text" formControlName="quartos" placeholder="Quantidade de quartos" required></ion-input>
+    <br>
+    
+    <ion-button [routerLink]="['/', 'pagamento']">Estamos quase lá!</ion-button>
+  </form>
+</ion-content>

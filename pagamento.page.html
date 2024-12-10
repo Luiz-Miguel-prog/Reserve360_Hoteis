@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-row>
+      <ion-col>
+    <ion-icon name="chevron-back-outline" [routerLink]="['/', 'jalapao', 'reserva']">
+    </ion-icon>
+      </ion-col>
+
+      <ion-col>
+    <ion-title>Confirmação e Pagamento</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <img src="/Projeto/src/assets/aguas_pagamento.png" class="img1">
+
+  <form [formGroup]="pagar" (ngSubmit)="usuarioPagar()" class="form">
+    <ion-input type="text" name="numero" placeholder="Número do Cartão" required></ion-input>
+    <ion-input type="text" name="validade" placeholder="Validade" required></ion-input>
+    <ion-input type="text" name="nome" placeholder="Nome escrito no cartão" required></ion-input>
+    <ion-input type="text" name="cvv" placeholder="CVV (verso do cartão)" required></ion-input>
+    <br>
+
+    <ion-button [routerLink]="['/', 'reservado']">Só mais um pouquinho...</ion-button>
+  </form>
+  
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon name="chevron-back-outline" [routerLink]="['/', 'detalheshotel']"></ion-icon>
+    <ion-title>Reserva</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar></ion-toolbar>
+  </ion-header>
+
+  <img src="/Projeto/src/assets/pousada_aguas.png" class="img1">
+
+  <p>Seja Bem-Vindo a pousada Águas do Jalapão</p>
+
+  <form [formGroup]="reserva" (ngSubmit)="usuarioReserva()" class="form">
+    <ion-input type="text" formControlName="nome" placeholder="Primeiro Nome" required></ion-input>
+    <ion-input type="text" formControlName="sobrenome" placeholder="Sobrenome" required></ion-input>
+    <ion-input type="text" formControlName="email" placeholder="Email*" required></ion-input>
+    <ion-input type="text" formControlName="celular" placeholder="Celular" required></ion-input>
+    <ion-input type="password" formControlName="senha1" placeholder="Senha" required></ion-input>
+    <ion-input type="password" formControlName="senha2" placeholder="Repita a senha" required></ion-input>
+    <br>
+
+    <ion-button [routerLink]="['/', 'checkin']">Confirme o dia da sua viagem...</ion-button>
+  </form>
+</ion-content>
